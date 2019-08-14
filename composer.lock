@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "180248a13975eb9423cd6539bb3fd591",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -379,6 +379,57 @@
             "time": "2019-07-29T16:49:45+00:00"
         },
         {
+            "name": "inertiajs/inertia-laravel",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inertiajs/inertia-laravel.git",
+                "reference": "2bdd1af10f488007a8981b66982d011054464e88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/2bdd1af10f488007a8981b66982d011054464e88",
+                "reference": "2bdd1af10f488007a8981b66982d011054464e88",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Inertia\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Inertia\\": "src"
+                },
+                "files": [
+                    "./helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "homepage": "https://reinink.ca"
+                }
+            ],
+            "description": "The Laravel adapter for Inertia.js.",
+            "keywords": [
+                "inertia",
+                "laravel"
+            ],
+            "time": "2019-08-10T13:58:04+00:00"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "v0.2",
             "source": {
@@ -465,6 +516,58 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "laravel-frontend-presets/inertiajs",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-frontend-presets/inertiajs.git",
+                "reference": "4a88334866a0c0ff3489115937b8ef27767afbbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-frontend-presets/inertiajs/zipball/4a88334866a0c0ff3489115937b8ef27767afbbc",
+                "reference": "4a88334866a0c0ff3489115937b8ef27767afbbc",
+                "shasum": ""
+            },
+            "require": {
+                "inertiajs/inertia-laravel": "^0.1",
+                "laravel/framework": "^5.8"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelFrontendPresets\\InertiaJsPreset\\InertiaJsPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelFrontendPresets\\InertiaJsPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dyrynda",
+                    "email": "michael@dyrynda.com.au"
+                }
+            ],
+            "description": "A Laravel frontend preset to get you up and running with Inertia.js",
+            "keywords": [
+                "inertiajs",
+                "laravel",
+                "preset"
+            ],
+            "time": "2019-08-14T02:41:17+00:00"
         },
         {
             "name": "laravel/framework",
