@@ -24,3 +24,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
+
+Route::get('/tests', function () {
+    return Inertia::render('Tests');
+});
+
+Route::get('/launch', 'LauncherController@index')->name('laucher.index');
+Route::post('/launch', 'LauncherController@start')->name('laucher.start');

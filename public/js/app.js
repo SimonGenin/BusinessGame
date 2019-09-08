@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"0eddaff03be8cb531b97","1":"4b1e0547a31a2e9f0656","2":"ba5805c054ba02891920"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f84d284d30df91fcb4e5","1":"2e3527b25126ecc36063","6":"5d6c3117c2922263490d","7":"b3dd4e4dff42e1e8d7f2","8":"5f5f7182a64fe81bbc66","9":"7c77a82c0afc9a72cd5a"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46246,6 +46246,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/Pages lazy recursive ^\\.\\/.*$":
 /*!***********************************************************!*\
   !*** ./resources/js/Pages lazy ^\.\/.*$ namespace object ***!
@@ -46264,19 +46275,37 @@ var map = {
 	],
 	"./Contact": [
 		"./resources/js/Pages/Contact.vue",
-		1
+		6
 	],
 	"./Contact.vue": [
 		"./resources/js/Pages/Contact.vue",
+		6
+	],
+	"./LaunchSession": [
+		"./resources/js/Pages/LaunchSession.vue",
+		9,
 		1
+	],
+	"./LaunchSession.vue": [
+		"./resources/js/Pages/LaunchSession.vue",
+		9,
+		1
+	],
+	"./Tests": [
+		"./resources/js/Pages/Tests.vue",
+		7
+	],
+	"./Tests.vue": [
+		"./resources/js/Pages/Tests.vue",
+		7
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
-		2
+		8
 	],
 	"./Welcome.vue": [
 		"./resources/js/Pages/Welcome.vue",
-		2
+		8
 	]
 };
 function webpackAsyncContext(req) {
@@ -46289,7 +46318,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }
@@ -46394,26 +46423,15 @@ if (token) {
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!***********************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/simongenin/PhpstormProjects/BusinessGame/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/simongenin/PhpstormProjects/BusinessGame/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/simongenin/PhpstormProjects/BusinessGame/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })
