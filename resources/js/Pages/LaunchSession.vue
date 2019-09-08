@@ -8,9 +8,6 @@
         <div class="flex flex-wrap sm:justify-center md:justify-start">
 
             <game-launcher></game-launcher>
-            <game-launcher></game-launcher>
-            <game-launcher></game-launcher>
-            <game-launcher></game-launcher>
 
         </div>
 
