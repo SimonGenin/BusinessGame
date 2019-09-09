@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f84d284d30df91fcb4e5","1":"ad76a5b7a65feb88f4ea","6":"5d6c3117c2922263490d","7":"b3dd4e4dff42e1e8d7f2","8":"5f5f7182a64fe81bbc66","9":"7c77a82c0afc9a72cd5a"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"1":"e2f19f7c359ba1d1e78c","4":"386c31bb930480f98ee8","8":"ac3e4551cb673df9e0fa","9":"c401532f5a2cd9e13c97"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46265,39 +46265,23 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./About": [
-		"./resources/js/Pages/About.vue",
-		0
-	],
-	"./About.vue": [
-		"./resources/js/Pages/About.vue",
-		0
-	],
-	"./Contact": [
-		"./resources/js/Pages/Contact.vue",
-		6
-	],
-	"./Contact.vue": [
-		"./resources/js/Pages/Contact.vue",
-		6
-	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",
-		9,
+		4,
 		1
 	],
 	"./LaunchSession.vue": [
 		"./resources/js/Pages/LaunchSession.vue",
-		9,
+		4,
 		1
 	],
-	"./Tests": [
-		"./resources/js/Pages/Tests.vue",
-		7
+	"./Play": [
+		"./resources/js/Pages/Play.vue",
+		9
 	],
-	"./Tests.vue": [
-		"./resources/js/Pages/Tests.vue",
-		7
+	"./Play.vue": [
+		"./resources/js/Pages/Play.vue",
+		9
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",

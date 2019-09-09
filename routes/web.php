@@ -34,13 +34,6 @@ Route::get('/tests', function () {
 Route::get('/launch', 'LauncherController@index')->name('laucher.index');
 Route::post('/launch', 'LauncherController@start')->name('laucher.start');
 
-Route::get('play/{slug}', 'PlayController@index')->name('play.index');
+Route::get('play/{game}/{name}/{player}/{slug}', 'PlayController@index')->name('play.index');
+Route::post('play', 'PlayController@store')->name('play.store');
 
-Route::get('test/{game}/{name}/{player}/{slug}', function ($game, $name, $player, $slug) {
-
-    $path = join([$game, $name, $player, $slug], '/');
-
-    $game = DB::table('bertrand_games')->whereJsonContains('game_urls', ['student_urls' => [ $player => $path]])->orWhereJsonContains('game_urls', ['professor_url' => $path ])->get();
-
-    return $game;
-});
