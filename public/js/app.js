@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ff8c867b7bca81e08869","3":"ac4f289b56b6e4719530","4":"76fd7ae5da714c934aab","5":"a9bea60294a4a87a4880","6":"8d96a82c5b32d8deb918"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"df3bc02d330dcb2e2479","1":"15ed25953e6dd0406dee","2":"8962f4c0df5849807632","3":"ac4f289b56b6e4719530"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46267,31 +46267,27 @@ module.exports = function(module) {
 var map = {
 	"./Info": [
 		"./resources/js/Pages/Info.vue",
-		6
+		1
 	],
 	"./Info.vue": [
 		"./resources/js/Pages/Info.vue",
-		6
+		1
 	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",
-		0,
-		4
+		0
 	],
 	"./LaunchSession.vue": [
 		"./resources/js/Pages/LaunchSession.vue",
-		0,
-		4
+		0
 	],
 	"./Play": [
 		"./resources/js/Pages/Play.vue",
-		0,
-		5
+		2
 	],
 	"./Play.vue": [
 		"./resources/js/Pages/Play.vue",
-		0,
-		5
+		2
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
@@ -46312,7 +46308,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+	return __webpack_require__.e(ids[1]).then(function() {
 		return __webpack_require__(id);
 	});
 }

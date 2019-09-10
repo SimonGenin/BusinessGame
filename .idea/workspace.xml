@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LauncherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LauncherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PlayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PlayController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/GameInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Info.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/GameLauncher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/GameLauncher.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Pages/Play.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Play.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +215,7 @@
       <workItem from="1566940761305" duration="2282000" />
       <workItem from="1567950987833" duration="8056000" />
       <workItem from="1568027730916" duration="12304000" />
-      <workItem from="1568105059559" duration="6841000" />
+      <workItem from="1568105059559" duration="8790000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1567952074508</created>
@@ -262,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568108097628</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="wip">
+      <created>1568112043996</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568112043996</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
