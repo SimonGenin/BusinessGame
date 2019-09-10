@@ -23,6 +23,7 @@ class LauncherController extends Controller
         $round_number = \request()->get('turnNumber');
         $name = \request()->get('name');
 
+        /** @var BertrandGame $game */
         $game = BertrandGame::make([
             'name' => $name,
             'number_of_players' => $player_number,
@@ -40,7 +41,7 @@ class LauncherController extends Controller
 
     public function links($hash) {
 
-        $game = BertrandGame::whereHashedLink($hash);
+        $game = BertrandGame::whereHashedLink($hash)->first();
         $url_start = URL::to('/play');
 
         return Inertia::render('GameInfo', compact('game', 'url_start'));
