@@ -43,7 +43,7 @@ class PlayController extends Controller
 
         // Update current turn only if everyone has played.
         if ( count($plays['turn-' . $current_turn]) === $game->number_of_players)
-            $game->plays['current_turn'] = $current_turn + 1;
+            $plays['current_turn'] = $current_turn + 1;
 
         $game->plays = $plays;
 

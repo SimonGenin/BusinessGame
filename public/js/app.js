@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ff8c867b7bca81e08869","2":"09a698e46cd4eedaa74b","3":"ac4f289b56b6e4719530","4":"76fd7ae5da714c934aab","5":"bff2684d81bd292a9efc"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ff8c867b7bca81e08869","3":"ac4f289b56b6e4719530","4":"76fd7ae5da714c934aab","5":"a9bea60294a4a87a4880","6":"8d96a82c5b32d8deb918"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46265,13 +46265,13 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./GameInfo": [
-		"./resources/js/Pages/GameInfo.vue",
-		2
+	"./Info": [
+		"./resources/js/Pages/Info.vue",
+		6
 	],
-	"./GameInfo.vue": [
-		"./resources/js/Pages/GameInfo.vue",
-		2
+	"./Info.vue": [
+		"./resources/js/Pages/Info.vue",
+		6
 	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",

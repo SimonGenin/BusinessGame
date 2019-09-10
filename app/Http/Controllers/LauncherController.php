@@ -35,16 +35,19 @@ class LauncherController extends Controller
         $game->generateUrls();
         $game->save();
 
-        return Redirect::route('launcher.links', ['hash' => $game->hashed_link]);
+        return \redirect()->route('launcher.links', ['hash' => $game->hashed_link]);
 
     }
 
     public function links($hash) {
 
-        $game = BertrandGame::whereHashedLink($hash)->first();
+        $game = BertrandGame::whereHashedLink($hash)->firstOrFail();
+
         $url_start = URL::to('/play');
 
-        return Inertia::render('GameInfo', compact('game', 'url_start'));
+        $game_urls = $game->game_urls;
+
+        return Inertia::render('Info', compact('game', 'url_start', 'game_urls'));
 
     }
 

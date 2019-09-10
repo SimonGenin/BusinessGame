@@ -90,9 +90,9 @@
                     game_id: this.$page.game.id,
                     player: this.$page.player,
                     value: this.value,
-                }).then( response => {
-                    document.location.reload(true);
-                } )
+                }, {
+                    replace: true
+                })
             },
 
         },
