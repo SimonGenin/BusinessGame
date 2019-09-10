@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"1":"e2f19f7c359ba1d1e78c","4":"386c31bb930480f98ee8","8":"ac3e4551cb673df9e0fa","9":"c401532f5a2cd9e13c97"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"ff8c867b7bca81e08869","2":"09a698e46cd4eedaa74b","3":"ac4f289b56b6e4719530","4":"76fd7ae5da714c934aab","5":"bff2684d81bd292a9efc"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46265,31 +46265,41 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./GameInfo": [
+		"./resources/js/Pages/GameInfo.vue",
+		2
+	],
+	"./GameInfo.vue": [
+		"./resources/js/Pages/GameInfo.vue",
+		2
+	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",
-		4,
-		1
+		0,
+		4
 	],
 	"./LaunchSession.vue": [
 		"./resources/js/Pages/LaunchSession.vue",
-		4,
-		1
+		0,
+		4
 	],
 	"./Play": [
 		"./resources/js/Pages/Play.vue",
-		9
+		0,
+		5
 	],
 	"./Play.vue": [
 		"./resources/js/Pages/Play.vue",
-		9
+		0,
+		5
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
-		8
+		3
 	],
 	"./Welcome.vue": [
 		"./resources/js/Pages/Welcome.vue",
-		8
+		3
 	]
 };
 function webpackAsyncContext(req) {

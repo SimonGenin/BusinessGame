@@ -2,37 +2,62 @@
     <layout>
 
 
-        <span>You are {{ $page.player.split("-").join(' ') }}</span>
-        <br>
-        <span>There are {{ $page.game.number_of_players }} players</span>
+        <h1 class="text-3xl mt-8 mb-4 text-semibold text-gray-800">You are the {{ $page.player.split("-").join(' ')
+            }}</h1>
 
-        <div v-for="turnIndex in $page.game.number_of_turns" :key="turnIndex" class="w-full flex justify-between">
+        <div class=" bg-white rounded shadow p-8 text-base">
 
-            <div v-if="(turnIndex - 1) == currentTurn" v-for="index in $page.game.number_of_players" :key="index">
+            <div v-for="turnIndex in $page.game.number_of_turns" :key="turnIndex"
+                 class="w-full flex justify-between items-center p-4 border border-gray-200"
+                 :class="{ 'bg-gray-100' : (turnIndex - 1) == currentTurn}">
 
-                <div v-if="$page.player !== 'player-' + (index - 1)">
-                    <p >{{ index - 1 }} play is hidden</p>
+                <div class="w-full flex justify-center" v-if="(turnIndex - 1) == currentTurn"
+                     v-for="index in $page.game.number_of_players" :key="index">
+
+
+                    <div v-if="$page.player !== 'player-' + (index - 1)">
+                        <p class="font-bold tracking-tight text-gray-500 text-sm uppercase">Hidden</p>
+                    </div>
+
+                    <div v-else>
+
+                        <p v-if="plays['turn-' + (turnIndex-1)][$page.player]">
+                            {{ plays['turn-' +(turnIndex-1)][$page.player] }}
+                        </p>
+
+                        <input v-else class="form-input border-gray-300 border-2 text-center" v-model="value"
+                               name="value" type="number" placeholder="Enter your value" required>
+                    </div>
+
                 </div>
 
-                <div v-else>
-                    <input v-model="value" name="value" type="number" placeholder="Enter your value">
+                <div class="w-full flex justify-center" v-else-if="(turnIndex - 1) < currentTurn">
+
+                    <p v-if="plays['turn-' + (turnIndex - 1)]['player-' + (index - 1)]"> {{ plays['turn-' +
+                        (turnIndex-1)]['player-' + (index-1)] }}</p>
+                    <p v-else>Error Missing</p>
+
+                </div>
+
+                <div class="w-full flex justify-center" v-else>
+
+                    Not played yet
+
                 </div>
 
             </div>
 
-            <div v-else>
 
-                Not this turn
-
+            <div class="flex justify-end mt-4">
+                <button @click="submit"
+                        class="px-6 py-3 text-sm tracking-tight uppercase bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded "
+                        :class="{'cursor-not-allowed opacity-25' : !this.value || this.value.length === 0 }"
+                >
+                    Validate
+                </button>
             </div>
 
         </div>
-
-        <button @click="submit" class="px-4 py-2 uppercase text-xs bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded">
-            Validate
-        </button>
-
-        {{ currentTurn }}
 
 
     </layout>
@@ -48,28 +73,39 @@
 
         data() {
             return {
-                value : null,
+                value: '',
                 currentTurn: JSON.parse(this.$page.game.plays).current_turn,
+                plays: JSON.parse(this.$page.game.plays)
             }
         },
 
-        methods:{
+        methods: {
 
             submit() {
+
+                if (!this.value || this.value.length === 0) return;
 
                 // Redirect
                 this.$inertia.post('/play', {
                     game_id: this.$page.game.id,
                     player: this.$page.player,
                     value: this.value,
-                    url: window.location.href
-                })
+                }).then( response => {
+                    document.location.reload(true);
+                } )
             },
 
         },
 
 
-
     }
 </script>
+
+<style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+</style>
+
 

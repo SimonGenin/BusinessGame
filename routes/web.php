@@ -33,6 +33,7 @@ Route::get('/tests', function () {
 
 Route::get('/launch', 'LauncherController@index')->name('laucher.index');
 Route::post('/launch', 'LauncherController@start')->name('laucher.start');
+Route::get('/links/{hash}', 'LauncherController@links')->name('laucher.links');
 
 Route::get('play/{game}/{name}/{player}/{slug}', 'PlayController@index')->name('play.index');
 Route::post('play', 'PlayController@store')->name('play.store');
