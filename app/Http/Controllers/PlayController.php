@@ -18,7 +18,27 @@ class PlayController extends Controller
 
         // $game->updateCurrentTurnBasedOnTimeConstraint();
 
-        return Inertia::render('Play.vue', compact('game', 'player'));
+        $game = BertrandGame::findOrFail($game->id);
+
+
+        $done_turns = $game->plays['current_turn'] - 1;
+
+
+        $payoffs = [];
+
+        if ($done_turns >= 0) {
+
+            for ($i = 0 ; $i <= $done_turns ; $i++) {
+
+                $key = 'turn-' . $i;
+                $payoffs += array( $key => $game->formula($i));
+
+            }
+
+        }
+
+
+        return Inertia::render('Play.vue', compact('game', 'player', 'payoffs'));
 
     }
 
@@ -33,6 +53,8 @@ class PlayController extends Controller
 
         // todo validate value !!!
         $value = $request->get('value');
+
+        $value = max(0, min($value, 100));
 
         $playerJsonName = $request->get('player');
 
@@ -49,11 +71,9 @@ class PlayController extends Controller
 
         $game->update();
 
-        return back();
+        return $url;
 
     }
 }
 
-/**
- * bertrand-game/Test/player-0/m2jjU0OplSLsjWIi
- */
+

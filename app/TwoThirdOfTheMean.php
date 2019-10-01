@@ -3,15 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
-use phpDocumentor\Reflection\Types\Integer;
 
-class BertrandGame extends Model
+class TwoThirdOfTheMean extends Model
 {
-
     protected $casts = [
         'game_urls' => 'array',
         'plays'     => 'array',
+        'number_of_players' => 'array'
     ];
 
     protected $guarded = [];
@@ -21,7 +19,6 @@ class BertrandGame extends Model
         // how to play for the other players
     ];
 
-    private $default_price = 100.0;
 
     private $timer = 20; // seconds
 
@@ -31,12 +28,12 @@ class BertrandGame extends Model
     public function generateUrls()
     {
         // we need a url to see the results
-        $prof_url = 'bertrand-game/'.urlencode($this->name).'/professor/'.Str::random(16);
+        $prof_url = 'two-third-of-the-mean/'.urlencode($this->name).'/professor/'.Str::random(16);
 
         // we need a url to play as each player
         $player_urls = [];
         for ($i = 0; $i < $this->number_of_players; $i++) {
-            $player_urls['player-'.$i] = 'bertrand-game/'.urlencode($this->name).'/player-'.$i.'/'.Str::random(16);
+            $player_urls['player-'.$i] = 'two-third-of-the-mean/'.urlencode($this->name).'/player-'.$i.'/'.Str::random(16);
         }
 
         $this->game_urls = ['professor_url' => $prof_url, 'student_urls' => $player_urls];
@@ -71,36 +68,27 @@ class BertrandGame extends Model
     {
         $plays = $this->plays['turn-'.$turn];
 
-        $smallestValue = null;
-        $counter = 0;
+        $total = 0;
 
+        $player_count = 0;
         foreach ($plays as $player_string => $play_value) {
 
-            if ($smallestValue == null) {
-                $smallestValue = $play_value;
-                $counter = 0;
-            }
+            $total += $play_value;
+            $player_count += 1;
 
-            if ($smallestValue < $play_value) {
-                $smallestValue = $play_value;
-                $counter = 0;
-            }
-
-            $counter++;
         }
+
+        $mean = $total / $player_count;
+        $twoThird = 2 / 3 * $mean;
 
         $payoffs = [];
         foreach ($plays as $player_string => $play_value) {
 
-            if ($play_value === $smallestValue) {
-                $payoffs += [$player_string => $this->profit($smallestValue, $counter)];
-            } else {
-                $payoffs += [$player_string => 0];
-            }
+            $payoffs += array($player_string => 0);
+
         }
 
         return $payoffs;
 
     }
 }
-

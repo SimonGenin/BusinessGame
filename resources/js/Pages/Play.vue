@@ -21,8 +21,8 @@
 
                     <div v-else>
 
-                        <p v-if="plays['turn-' + (turnIndex-1)][$page.player]">
-                            {{ plays['turn-' +(turnIndex-1)][$page.player] }}
+                        <p class="font-semibold" v-if="plays['turn-' + (turnIndex-1)][$page.player]">
+                            Waiting ({{ plays['turn-' +(turnIndex-1)][$page.player] }})
                         </p>
 
                         <input v-else class="form-input border-gray-300 border-2 text-center" v-model="value"
@@ -33,7 +33,7 @@
 
                 <div class="w-full flex justify-center" v-else-if="(turnIndex - 1) < currentTurn">
 
-                    <p v-if="plays['turn-' + (turnIndex - 1)]['player-' + (index - 1)]"> {{ plays['turn-' +
+                    <p v-if="plays['turn-' + (turnIndex - 1)]['player-' + (index - 1)]"> {{ payoffs['turn-' +
                         (turnIndex-1)]['player-' + (index-1)] }}</p>
                     <p v-else>Error Missing</p>
 
@@ -49,12 +49,23 @@
 
 
             <div class="flex justify-end mt-4">
-                <button @click="submit"
+
+                <button
+                    v-if="$page.game.number_of_turns != currentTurn"
+                    @click="submit"
                         class="px-6 py-3 text-sm tracking-tight uppercase bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded "
                         :class="{'cursor-not-allowed opacity-25' : !this.value || this.value.length === 0 }"
                 >
                     Validate
                 </button>
+
+                <button
+                    v-else
+                    class="px-6 py-3 text-sm tracking-tight uppercase bg-green-700 hover:bg-green-600 font-semibold text-green-100 rounded "
+                >
+                    Export for Excel
+                </button>
+
             </div>
 
         </div>
@@ -74,8 +85,9 @@
         data() {
             return {
                 value: '',
-                currentTurn: JSON.parse(this.$page.game.plays).current_turn,
-                plays: JSON.parse(this.$page.game.plays)
+                currentTurn: this.$page.game.plays.current_turn,
+                plays: this.$page.game.plays,
+                payoffs: this.$page.payoffs
             }
         },
 
@@ -86,13 +98,14 @@
                 if (!this.value || this.value.length === 0) return;
 
                 // Redirect
-                this.$inertia.post('/play', {
+                window.axios.post('/play', {
                     game_id: this.$page.game.id,
                     player: this.$page.player,
                     value: this.value,
-                }, {
-                    replace: true
-                })
+                    url: document.location.href
+                }).then( response => {
+                    this.$inertia.visit(response.data)
+                } )
             },
 
         },
