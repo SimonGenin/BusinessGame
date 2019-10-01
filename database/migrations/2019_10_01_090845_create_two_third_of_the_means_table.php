@@ -19,7 +19,7 @@ class CreateTwoThirdOfTheMeansTable extends Migration
             $table->string('name');
             $table->string('hashed_link');
             $table->integer('number_of_turns');
-            $table->json('number_of_players');
+            // $table->json('number_of_players');
             $table->json('game_urls');
             $table->json('plays');
 

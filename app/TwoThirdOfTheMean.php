@@ -20,7 +20,7 @@ class TwoThirdOfTheMean extends Model
     ];
 
 
-    private $timer = 20; // seconds
+    private $timer = 2 * 60; // seconds
 
     /**
      * Generates urls to access the game
@@ -28,7 +28,7 @@ class TwoThirdOfTheMean extends Model
     public function generateUrls()
     {
         // we need a url to see the results
-        $prof_url = 'two-third-of-the-mean/'.urlencode($this->name).'/professor/'.Str::random(16);
+        $prof_url = 'two-third-of-the-mean/'.urlencode($this->name).'/professor/'. Str::random(16);
 
         // we need a url to play as each player
         $player_urls = [];
@@ -55,13 +55,7 @@ class TwoThirdOfTheMean extends Model
 
     public function generateHash()
     {
-
         $this->hashed_link = Str::random();
-    }
-
-    public function profit($p, $f)
-    {
-        return ((100 - $p) * ($p - 10)) / $f;
     }
 
     public function formula($turn)
@@ -81,14 +75,11 @@ class TwoThirdOfTheMean extends Model
         $mean = $total / $player_count;
         $twoThird = 2 / 3 * $mean;
 
-        $payoffs = [];
-        foreach ($plays as $player_string => $play_value) {
+        usort($plays, function ($a, $b) use ($twoThird) {
+            return  $twoThird - $a > $twoThird - $b;
+        });
 
-            $payoffs += array($player_string => 0);
-
-        }
-
-        return $payoffs;
+        return array('sorted_plays' => $plays, 'mean' => $mean, '2_3' => $twoThird);
 
     }
 }
