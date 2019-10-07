@@ -10,11 +10,15 @@
             <div class="" v-for="index in $page.game.number_of_turns" >
 
                 <div class="my-2" v-if="index - 1 < currentTurn">
+
+                    <h3 class="text-lg">Turn {{ index - 1 }}</h3>
+
                     <span>Two third of the mean were <span class="text-gray-600 font-semibold">{{ payoffs['turn-' + (index - 1)].two_third }}</span></span><br>
 
                     <span v-for="(value, name) in payoffs['turn-' + (index - 1)]['values']">
 
-                        {{ name }} played {{ value }} <br>
+                        {{ name }} played <span class="text-gray-600 ">{{ value }}</span> and was <span class="text-gray-600 ">{{(Math.abs(payoffs['turn-' + (index - 1)].two_third - value)).toFixed(2) }}</span> from the answer.<br>
+
                     </span>
 
                 </div>
@@ -22,9 +26,13 @@
             </div>
 
 
-        <div class="mt-4">
-            Name: <input type="text" placeholder="name" class="form-input" v-model="name"><br>
-            Value: <input type="number" placeholder="value" class="form-input" v-model="value">
+        <div class="mt-4 bg-gray-100 w-full p-4" v-if="$page.game.number_of_turns != currentTurn" >
+
+            <h3 class="text-xl font-semibold mb-2">This turn</h3>
+
+                <input type="text" placeholder="Type your name" class="form-input flex-1 mb-2 w-full" v-model="name"><br>
+
+            <input type="number" placeholder="Type your guess" class="form-input w-full" v-model="value">
         </div>
 
         </div>
