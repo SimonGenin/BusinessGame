@@ -40,26 +40,6 @@ class LauncherController extends Controller
 
     }
 
-    public function launchTwoThird() {
-
-        $round_number = \request()->get('turnNumber');
-        $name = \request()->get('name');
-
-        /** @var TwoThirdOfTheMean $game */
-        $game = TwoThirdOfTheMean::make([
-            'name' => $name,
-            'number_of_turns' => $round_number,
-        ]);
-
-        $game->generateHash();
-        $game->preparePlaysArray();
-        $game->generateUrls();
-        $game->save();
-
-        // return \redirect()->route('launcher.links', ['hash' => $game->hashed_link]);
-
-    }
-
 
     public function links($hash) {
 

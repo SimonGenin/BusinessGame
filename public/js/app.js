@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"df3bc02d330dcb2e2479","1":"15ed25953e6dd0406dee","2":"71e2b7c7f1ee53360793","3":"ac4f289b56b6e4719530","4":"64e1638e57063d90efe0"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"74206ee7379a430c5c41","1":"d98616198bc3b9c0f398","2":"71e2b7c7f1ee53360793","3":"55b6944639a8bdf08dab","4":"321e16789fe62e8a0d67","5":"43fc7c219da9d3016951","6":"948910ca3a214cb4ef31"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46273,6 +46273,14 @@ var map = {
 		"./resources/js/Pages/Info.vue",
 		1
 	],
+	"./InfoTwoThirdOfTheMean": [
+		"./resources/js/Pages/InfoTwoThirdOfTheMean.vue",
+		6
+	],
+	"./InfoTwoThirdOfTheMean.vue": [
+		"./resources/js/Pages/InfoTwoThirdOfTheMean.vue",
+		6
+	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",
 		0
@@ -46291,19 +46299,27 @@ var map = {
 	],
 	"./PlayTwoThird": [
 		"./resources/js/Pages/PlayTwoThird.vue",
-		4
+		3
 	],
 	"./PlayTwoThird.vue": [
 		"./resources/js/Pages/PlayTwoThird.vue",
+		3
+	],
+	"./TwoThirdOfTheMeanPlay": [
+		"./resources/js/Pages/TwoThirdOfTheMeanPlay.vue",
+		4
+	],
+	"./TwoThirdOfTheMeanPlay.vue": [
+		"./resources/js/Pages/TwoThirdOfTheMeanPlay.vue",
 		4
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
-		3
+		5
 	],
 	"./Welcome.vue": [
 		"./resources/js/Pages/Welcome.vue",
-		3
+		5
 	]
 };
 function webpackAsyncContext(req) {

@@ -35,6 +35,17 @@ Route::get('/launch', 'LauncherController@index')->name('launcher.index');
 Route::post('/launch', 'LauncherController@start')->name('launcher.start');
 Route::get('/links/{hash}', 'LauncherController@links')->name('launcher.links');
 
-Route::get('play/{game}/{name}/{player}/{slug}', 'PlayController@index')->name('play.index');
-Route::post('play', 'PlayController@store')->name('play.store');
 
+Route::post('/launch/two-third', 'TwoThirdOfTheMeanController@launch')->name('launcher.start.two-third');
+Route::get('/links/two-third/{hash}', 'TwoThirdOfTheMeanController@links')->name('links.two-third');
+
+
+Route::get('play/{game}/{name}/players/{slug}', 'TwoThirdOfTheMeanController@show');
+
+Route::get('play/{game}/{name}/{player}/{slug}', 'PlayController@index')->name('play.index');
+
+
+Route::post('play', 'PlayController@store')->name('play.store');
+Route::post('play/two-third', 'TwoThirdOfTheMeanController@storePlay')->name('play.two-third.store');
+
+Route::post('close-round', 'TwoThirdOfTheMeanController@closeRound');

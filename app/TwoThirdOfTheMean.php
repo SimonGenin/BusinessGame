@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class TwoThirdOfTheMean extends Model
 {
@@ -30,13 +31,10 @@ class TwoThirdOfTheMean extends Model
         // we need a url to see the results
         $prof_url = 'two-third-of-the-mean/'.urlencode($this->name).'/professor/'. Str::random(16);
 
-        // we need a url to play as each player
-        $player_urls = [];
-        for ($i = 0; $i < $this->number_of_players; $i++) {
-            $player_urls['player-'.$i] = 'two-third-of-the-mean/'.urlencode($this->name).'/player-'.$i.'/'.Str::random(16);
-        }
+        // we need a url for the players
+        $player_url = 'two-third-of-the-mean/'.urlencode($this->name).'/players/'.Str::random(16);
 
-        $this->game_urls = ['professor_url' => $prof_url, 'student_urls' => $player_urls];
+        $this->game_urls = ['professor_url' => $prof_url, 'student_url' => $player_url];
     }
 
     public function preparePlaysArray()
@@ -75,11 +73,20 @@ class TwoThirdOfTheMean extends Model
         $mean = $total / $player_count;
         $twoThird = 2 / 3 * $mean;
 
-        usort($plays, function ($a, $b) use ($twoThird) {
-            return  $twoThird - $a > $twoThird - $b;
+
+        uasort($plays, function ($a, $b) use ($twoThird) {
+            return  abs($twoThird - $a) > abs($twoThird - $b);
         });
 
-        return array('sorted_plays' => $plays, 'mean' => $mean, '2_3' => $twoThird);
+        $values = [];
+        $players = [];
+
+        foreach ($plays as $key => $el) {
+            array_push($values, $el);
+            array_push($players, $key);
+        }
+
+        return array('values' => $plays, 'players' => $players, 'mean' => round($mean, 2), 'two_third' => round($twoThird, 2));
 
     }
 }

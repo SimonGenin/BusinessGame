@@ -8,6 +8,7 @@
         <div class="flex flex-wrap sm:justify-center md:justify-start">
 
             <game-launcher></game-launcher>
+            <two-third-of-the-mean-game-launcher></two-third-of-the-mean-game-launcher>
 
         </div>
 
@@ -18,11 +19,13 @@
 <script>
     import Layout from '../Shared/Layout'
     import GameLauncher from '../Components/GameLauncher'
+    import TwoThirdOfTheMeanGameLauncher from '../Components/TwoThirdOfTheMeanGameLauncher'
 
     export default {
         components: {
             Layout,
-            GameLauncher
+            GameLauncher,
+            TwoThirdOfTheMeanGameLauncher
         },
 
         data() {

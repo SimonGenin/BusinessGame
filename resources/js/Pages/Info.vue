@@ -36,7 +36,7 @@
 
         created() {
 
-            console.log(this.gameUrls['student_urls']['player-' + 0])
+            // console.log(this.gameUrls['student_urls']['player-' + 0])
 
         }
 

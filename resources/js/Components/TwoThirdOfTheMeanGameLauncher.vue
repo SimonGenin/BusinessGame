@@ -4,7 +4,7 @@
 
         <div class="bg-white rounded shadow p-6 ">
 
-            <h4 class="text-xl font-bold">Bertrand Game</h4>
+            <h4 class="text-xl font-bold">Two Third Of The Mean</h4>
 
             <hr class="mt-4 mb-8">
 
@@ -15,12 +15,6 @@
             <div class="flex items-center mb-4">
                 <input class="w-1/5 form-input bg-gray-100" v-model="turnNumber" type="number">
                 <p class="flex-1 ml-8">Number of turns</p>
-            </div>
-
-
-            <div class="flex items-center mb-4">
-                <input class="w-1/5 form-input bg-gray-100" v-model="playerNumber" type="number">
-                <p class="flex-1 ml-8">Number of players</p>
             </div>
 
             <div class="flex justify-end">
@@ -46,7 +40,6 @@
         data() {
             return {
                 turnNumber: null,
-                playerNumber: null,
                 name: null,
             }
         },
@@ -54,7 +47,7 @@
         computed: {
 
             disabled() {
-                return this.turnNumber == null || this.turnNumber == 0 || this.playerNumber == null || this.playerNumber < 2
+                return this.turnNumber == null || this.turnNumber == 0
             }
 
         },
@@ -64,10 +57,9 @@
             submit() {
 
                 // Redirect
-                this.$inertia.post('/launch', {
+                this.$inertia.post('/launch/two-third', {
                     name: this.name,
                     turnNumber: this.turnNumber,
-                    playerNumber: this.playerNumber,
                 })
             },
 
