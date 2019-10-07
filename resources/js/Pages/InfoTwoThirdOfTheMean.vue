@@ -14,7 +14,7 @@
                 {{ $page.url_start + '/' +  gameUrls['student_url'] }}
             </p>
 
-            <div class="flex justify-end">
+            <div class="flex justify-end" v-if="!finished">
             <button @click="closeRound" class="px-6 py-3 text-sm tracking-tight uppercase bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded"
             >Close Current round</button>
             </div>
@@ -35,7 +35,8 @@
 
         data() {
             return {
-                gameUrls : this.$page.game_urls
+                gameUrls : this.$page.game_urls,
+                finished: this.$page.finished,
             }
         },
 

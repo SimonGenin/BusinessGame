@@ -41,6 +41,7 @@ Route::get('/links/two-third/{hash}', 'TwoThirdOfTheMeanController@links')->name
 
 
 Route::get('play/{game}/{name}/players/{slug}', 'TwoThirdOfTheMeanController@show');
+Route::get('play/{game}/{name}/professor/{slug}', 'TwoThirdOfTheMeanController@show');
 
 Route::get('play/{game}/{name}/{player}/{slug}', 'PlayController@index')->name('play.index');
 

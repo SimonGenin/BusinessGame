@@ -70,7 +70,7 @@ class TwoThirdOfTheMean extends Model
 
         }
 
-        $mean = $total / $player_count;
+        $mean = $total / max(1, $player_count);
         $twoThird = 2 / 3 * $mean;
 
 

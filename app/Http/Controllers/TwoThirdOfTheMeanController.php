@@ -14,9 +14,11 @@ class TwoThirdOfTheMeanController extends Controller
 
     public function show($game, $name, $slug) {
 
-        $path = join([$game, $name, 'players', $slug], '/');
+        $student_path = join([$game, $name, 'players', $slug], '/');
+        $prof_path = join([$game, $name, 'professor', $slug], '/');
 
-        $game = DB::table('two_third_of_the_means')->whereJsonContains('game_urls', ['student_url' => $path])->orWhereJsonContains('game_urls', ['professor_url' => $path ])->first();
+        $game = DB::table('two_third_of_the_means')->whereJsonContains('game_urls', ['student_url' => $student_path])->orWhereJsonContains('game_urls', ['professor_url' => $prof_path])->first();
+
 
         $game = TwoThirdOfTheMean::findOrFail($game->id);
 
@@ -25,7 +27,6 @@ class TwoThirdOfTheMeanController extends Controller
 
         $payoffs = [];
 
-        // dd($game);
 
         if ($done_turns >= 0) {
 
@@ -116,7 +117,10 @@ class TwoThirdOfTheMeanController extends Controller
 
         $game_urls = $game->game_urls;
 
-        return Inertia::render('InfoTwoThirdOfTheMean', compact('game', 'url_start', 'game_urls'));
+        $finished = $game->number_of_turns == $game->plays['current_turn'] ;
+
+
+        return Inertia::render('InfoTwoThirdOfTheMean', compact('game', 'url_start', 'game_urls', 'finished'));
 
     }
 
