@@ -56,6 +56,9 @@ class TwoThirdOfTheMeanController extends Controller
 
         // todo validate value !!!
         $value = $request->get('value');
+
+        $value = max(0, min(100, $value));
+
         $name = $request->get('name');
         $current_turn = $game->plays['current_turn'];
         $plays = $game->plays;
