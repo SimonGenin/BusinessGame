@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/Components/RepeatedInmateDilemmaGameLauncher.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/InfoRepeatedInmateDilemma.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/RepeatedInmateDilemmaPlay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TwoThirdOfTheMeanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TwoThirdOfTheMeanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/LaunchSession.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/LaunchSession.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,10 +172,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/Pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/Pages" />
+      <recent name="$PROJECT_DIR$/resources/js/Components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/Pages" />
     </key>
   </component>
@@ -219,7 +230,10 @@
       <workItem from="1569854015868" duration="6839000" />
       <workItem from="1570279324289" duration="2061000" />
       <workItem from="1570315650240" duration="602000" />
-      <workItem from="1570380682274" duration="11015000" />
+      <workItem from="1570380682274" duration="11470000" />
+      <workItem from="1570519537344" duration="658000" />
+      <workItem from="1571124720560" duration="957000" />
+      <workItem from="1571408380124" duration="15507000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1567952074508</created>
@@ -312,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570471804130</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="wip">
+      <created>1570475097486</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570475097486</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

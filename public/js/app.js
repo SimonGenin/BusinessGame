@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"74206ee7379a430c5c41","1":"d98616198bc3b9c0f398","2":"71e2b7c7f1ee53360793","3":"55b6944639a8bdf08dab","4":"ad73525dd4ee386e0959","5":"43fc7c219da9d3016951","6":"a18cecc71369aead3d2a"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"0a36e425c408bd71ce0c","1":"d98616198bc3b9c0f398","2":"b353a9ef98f03430cc3b","3":"78299154d54b4d28a6b5","4":"854a1be853808caba9b4","5":"6b7a2e6e3739bffaac6d","6":"e2af2ffd483cce2dbdd8","7":"fbe4fd7c80cb9de43aac","8":"ac3e4551cb673df9e0fa"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46273,13 +46273,21 @@ var map = {
 		"./resources/js/Pages/Info.vue",
 		1
 	],
+	"./InfoRepeatedInmateDilemma": [
+		"./resources/js/Pages/InfoRepeatedInmateDilemma.vue",
+		2
+	],
+	"./InfoRepeatedInmateDilemma.vue": [
+		"./resources/js/Pages/InfoRepeatedInmateDilemma.vue",
+		2
+	],
 	"./InfoTwoThirdOfTheMean": [
 		"./resources/js/Pages/InfoTwoThirdOfTheMean.vue",
-		6
+		3
 	],
 	"./InfoTwoThirdOfTheMean.vue": [
 		"./resources/js/Pages/InfoTwoThirdOfTheMean.vue",
-		6
+		3
 	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",
@@ -46291,35 +46299,43 @@ var map = {
 	],
 	"./Play": [
 		"./resources/js/Pages/Play.vue",
-		2
+		4
 	],
 	"./Play.vue": [
 		"./resources/js/Pages/Play.vue",
-		2
+		4
 	],
 	"./PlayTwoThird": [
 		"./resources/js/Pages/PlayTwoThird.vue",
-		3
+		5
 	],
 	"./PlayTwoThird.vue": [
 		"./resources/js/Pages/PlayTwoThird.vue",
-		3
+		5
+	],
+	"./RepeatedInmateDilemmaPlay": [
+		"./resources/js/Pages/RepeatedInmateDilemmaPlay.vue",
+		6
+	],
+	"./RepeatedInmateDilemmaPlay.vue": [
+		"./resources/js/Pages/RepeatedInmateDilemmaPlay.vue",
+		6
 	],
 	"./TwoThirdOfTheMeanPlay": [
 		"./resources/js/Pages/TwoThirdOfTheMeanPlay.vue",
-		4
+		7
 	],
 	"./TwoThirdOfTheMeanPlay.vue": [
 		"./resources/js/Pages/TwoThirdOfTheMeanPlay.vue",
-		4
+		7
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
-		5
+		8
 	],
 	"./Welcome.vue": [
 		"./resources/js/Pages/Welcome.vue",
-		5
+		8
 	]
 };
 function webpackAsyncContext(req) {

@@ -9,7 +9,7 @@
 
             <game-launcher></game-launcher>
             <two-third-of-the-mean-game-launcher></two-third-of-the-mean-game-launcher>
-
+            <repeated-inmate-dilemma-game-launcher></repeated-inmate-dilemma-game-launcher>
         </div>
 
 
@@ -20,12 +20,14 @@
     import Layout from '../Shared/Layout'
     import GameLauncher from '../Components/GameLauncher'
     import TwoThirdOfTheMeanGameLauncher from '../Components/TwoThirdOfTheMeanGameLauncher'
+    import RepeatedInmateDilemmaGameLauncher from '../Components/RepeatedInmateDilemmaGameLauncher'
 
     export default {
         components: {
             Layout,
             GameLauncher,
-            TwoThirdOfTheMeanGameLauncher
+            TwoThirdOfTheMeanGameLauncher,
+            RepeatedInmateDilemmaGameLauncher
         },
 
         data() {
