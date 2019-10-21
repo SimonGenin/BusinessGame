@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="" />
+    <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepeatedInmateDilemmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepeatedInmateDilemmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/RepeatedInmateDilemma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RepeatedInmateDilemma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_18_142425_create_repeted_inmate_dilemmas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_18_142425_create_repeted_inmate_dilemmas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/InfoRepeatedInmateDilemma.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/InfoRepeatedInmateDilemma.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/RepeatedInmateDilemmaPlay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/RepeatedInmateDilemmaPlay.vue" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +229,8 @@
       <workItem from="1570380682274" duration="11470000" />
       <workItem from="1570519537344" duration="658000" />
       <workItem from="1571124720560" duration="957000" />
-      <workItem from="1571408380124" duration="15708000" />
+      <workItem from="1571408380124" duration="16258000" />
+      <workItem from="1571639698248" duration="2526000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1567952074508</created>
@@ -328,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571503726854</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="wip">
+      <created>1571578556129</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1571578556129</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

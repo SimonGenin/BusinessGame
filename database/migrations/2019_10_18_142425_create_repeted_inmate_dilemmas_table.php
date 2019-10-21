@@ -23,6 +23,7 @@ class CreateRepetedInmateDilemmasTable extends Migration
             $table->json('game_urls');
             $table->json('plays');
             $table->json('payoffs');
+            $table->boolean('isFinished')->default(false);
 
             $table->timestamps();
         });

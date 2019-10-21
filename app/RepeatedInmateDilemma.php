@@ -11,7 +11,8 @@ class RepeatedInmateDilemma extends Model
         'game_urls' => 'array',
         'plays'     => 'array',
         'number_of_players' => 'array',
-        'payoffs' => 'array'
+        'payoffs' => 'array',
+        'isFinished' => 'boolean'
     ];
 
     protected $guarded = [];
@@ -53,17 +54,16 @@ class RepeatedInmateDilemma extends Model
                 $played = $this->plays['turn-' . $turn]['player-' . $i]['play'];
                 $playedOpponent = $this->plays['turn-' . $turn]['player-' . ($i + 1)]['play'];
 
+                if ($played === null) {
+                    $played = false;
+                }
 
-                if ($played === null || $playedOpponent === null) {
-                    $payoffs['player-' . $i]['payoff'] = 0;
-                    $payoffs['player-' . ($i + 1)]['payoff'] = 0;
-                    continue;
+                if ($playedOpponent === null) {
+                    $playedOpponent = false;
                 }
 
                 $payoffs['player-' . $i]['payoff'] = $this->payoff($played, $playedOpponent);
                 $payoffs['player-' . ($i + 1)]['payoff'] = $this->payoff($playedOpponent, $played);
-
-
 
             }
 
@@ -86,7 +86,7 @@ class RepeatedInmateDilemma extends Model
 
             if ($boolB == true) {
 
-                return 3;
+                return 2;
 
             }
 
@@ -102,7 +102,7 @@ class RepeatedInmateDilemma extends Model
 
             if ($boolB == true) {
 
-                return 5;
+                return 3;
 
             }
 

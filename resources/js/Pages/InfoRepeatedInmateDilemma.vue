@@ -9,7 +9,8 @@
             <h2 class="text-2xl mb-4 text-semibold text-gray-800">Professor Link</h2>
             <p>{{ $page.url_start + '/' + gameUrls.professor_url }}</p>
 
-            <h2 class="text-2xl mt-8 mb-4 text-semibold text-gray-800">Player links</h2>
+            <h2 class="text-2xl mt-8 mb-2 text-semibold text-gray-800">Player links</h2>
+            <p class="text-sm mb-4 text-gray-600">Player 0 plays against player 1, Player 2 plays against player 3, etc.</p>
             <p class="mb-2" v-for="(url, index) in gameUrls.student_urls">
                 <span class="text-gray-600">Player {{ index.slice(-1)  }}: </span><br> {{ $page.url_start + '/' +  url }}
             </p>
@@ -39,7 +40,7 @@
         data() {
             return {
                 gameUrls : this.$page.game_urls,
-                finished: this.$page.finished,
+                finished: this.$page.game.isFinished,
             }
         },
 

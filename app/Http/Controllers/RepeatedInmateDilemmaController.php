@@ -69,7 +69,15 @@ class RepeatedInmateDilemmaController extends Controller
 
         $game->formula($current_turn);
 
-        $plays['current_turn'] = $current_turn + 1;
+        $current_turn++;
+
+        if ($game->number_of_turns == $current_turn) {
+            $current_turn--; // to avoid overflow
+            $game->isFinished = true;
+        }
+
+        $plays['current_turn'] = $current_turn;
+
 
         $game->plays = $plays;
 
@@ -117,10 +125,7 @@ class RepeatedInmateDilemmaController extends Controller
 
         $game_urls = $game->game_urls;
 
-        $finished = $game->number_of_turns == $game->plays['current_turn'] ;
-
-
-        return Inertia::render('InfoRepeatedInmateDilemma', compact('game', 'url_start', 'game_urls', 'finished'));
+        return Inertia::render('InfoRepeatedInmateDilemma', compact('game', 'url_start', 'game_urls'));
 
     }
 }
