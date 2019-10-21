@@ -31,12 +31,12 @@ class BertrandGame extends Model
     public function generateUrls()
     {
         // we need a url to see the results
-        $prof_url = 'bertrand-game/'.urlencode($this->name).'/professor/'.Str::random(16);
+        $prof_url = 'bertrand-game/'.urlencode($this->name).'/professor/'.Str::random(8);
 
         // we need a url to play as each player
         $player_urls = [];
         for ($i = 0; $i < $this->number_of_players; $i++) {
-            $player_urls['player-'.$i] = 'bertrand-game/'.urlencode($this->name).'/player-'.$i.'/'.Str::random(16);
+            $player_urls['player-'.$i] = 'bertrand-game/'.urlencode($this->name).'/player-'.$i.'/'.Str::random(8);
         }
 
         $this->game_urls = ['professor_url' => $prof_url, 'student_urls' => $player_urls];

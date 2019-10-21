@@ -29,10 +29,10 @@ class TwoThirdOfTheMean extends Model
     public function generateUrls()
     {
         // we need a url to see the results
-        $prof_url = 'two-third-of-the-mean/'.urlencode($this->name).'/professor/'. Str::random(16);
+        $prof_url = 'two-third-of-the-mean/'.urlencode($this->name).'/professor/'. Str::random(8);
 
         // we need a url for the players
-        $player_url = 'two-third-of-the-mean/'.urlencode($this->name).'/players/'.Str::random(16);
+        $player_url = 'two-third-of-the-mean/'.urlencode($this->name).'/players/'.Str::random(8);
 
         $this->game_urls = ['professor_url' => $prof_url, 'student_url' => $player_url];
     }

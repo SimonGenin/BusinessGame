@@ -27,18 +27,75 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
 
-Route::get('/tests', function () {
+Route::get('/code/{slug}', function ($slug) {
 
-    $game = \App\RepeatedInmateDilemma::find(2);
+    // tADlJcik
+
+    $games = \App\RepeatedInmateDilemma::all();
+
+    foreach ($games as $game) {
+
+        $foundSlug = Arr::last((explode('/', $game->game_urls['professor_url'])));
+        if ($foundSlug == $slug) {
+            return redirect('/play/' . $game->game_urls['professor_url']);
+        }
+
+        $student_urls = $game->game_urls['student_urls'];
+
+        foreach ($student_urls as $studentUrl) {
+
+            $foundSlug = Arr::last((explode('/', $studentUrl)));
+
+            if ($foundSlug == $slug) {
+                return redirect('/play/' . $studentUrl);
+            }
+
+        }
+
+    }
+
+    $games = \App\TwoThirdOfTheMean::all();
+
+    foreach ($games as $game) {
+
+        $foundSlug = Arr::last((explode('/', $game->game_urls['professor_url'])));
+        if ($foundSlug == $slug) {
+            return redirect('/play/' . $game->game_urls['professor_url']);
+        }
+
+        $foundSlug = Arr::last((explode('/', $game->game_urls['student_url'])));
+        if ($foundSlug == $slug) {
+            return redirect('/play/' . $game->game_urls['student_url']);
+        }
 
 
-    $game->formula(0);
+    }
 
-    return $game;
+    $games = \App\BertrandGame::all();
 
+    foreach ($games as $game) {
+
+        $foundSlug = Arr::last((explode('/', $game->game_urls['professor_url'])));
+        if ($foundSlug == $slug) {
+            return redirect('/play/' . $game->game_urls['professor_url']);
+        }
+
+        $student_urls = $game->game_urls['student_urls'];
+
+        foreach ($student_urls as $studentUrl) {
+
+            $foundSlug = Arr::last((explode('/', $studentUrl)));
+
+            if ($foundSlug == $slug) {
+                return redirect('/play/' . $studentUrl);
+            }
+
+        }
+
+    }
+
+    abort(404);
 });
-
-
 
 Route::post('/launch/two-third', 'TwoThirdOfTheMeanController@launch')->name('launcher.start.two-third');
 Route::post('/launch/dilemma', 'RepeatedInmateDilemmaController@launch')->name('launcher.start.dilemma');
@@ -54,14 +111,12 @@ Route::get('play/repeated-inmate-dilemma/{name}/professor/{slug}', 'RepeatedInma
 
 Route::get('play/{game}/{name}/{player}/{slug}', 'PlayController@index')->name('play.index');
 
-
 Route::post('play', 'PlayController@store')->name('play.store');
 Route::post('play/dilemma', 'RepeatedInmateDilemmaController@storePlay')->name('play.dilemma.store');
 Route::post('play/two-third', 'TwoThirdOfTheMeanController@storePlay')->name('play.two-third.store');
 
 Route::post('close-round', 'TwoThirdOfTheMeanController@closeRound');
 Route::post('/dilemma/close', 'RepeatedInmateDilemmaController@closeRound');
-
 
 Route::get('/launch', 'LauncherController@index')->name('launcher.index');
 Route::post('/launch', 'LauncherController@start')->name('launcher.start');
