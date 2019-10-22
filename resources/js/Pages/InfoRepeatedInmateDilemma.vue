@@ -11,8 +11,10 @@
 
             <h2 class="text-2xl mt-8 mb-2 text-semibold text-gray-800">Player links</h2>
             <p class="text-sm mb-4 text-gray-600">Player 0 plays against player 1, Player 2 plays against player 3, etc.</p>
-            <p class="mb-2" v-for="(url, index) in gameUrls.student_urls">
-                <span class="text-gray-600">Player {{ index.slice(-1)  }}: </span><br> {{ $page.url_start + '/' +  url }}
+
+            <p class="mb-2" v-for="(url, index) in gameUrls.student_urls" :class="{ 'border-b-4  mb-4 pb-4' : parseInt(index.split('-')[1]) % 2 != 0}" >
+                <span class="text-gray-600">Player {{ index.split("-")[1]  }}: </span><br> {{ $page.url_start + '/' +  url }}
+
             </p>
 
 
