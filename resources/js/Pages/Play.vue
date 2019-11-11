@@ -138,7 +138,7 @@
 
                 return [...Array(this.$page.game.number_of_players).keys()].map(player_index => {
 
-                    let color = this.getRandomColor()
+                    let color = this.getRandomColor();
 
                     return {
                         label: 'Player ' + player_index,
@@ -176,12 +176,6 @@
             },
 
         },
-
-        mounted() {
-
-
-        }
-
 
     }
 </script>
