@@ -54,7 +54,7 @@ class PlayController extends Controller
         // todo validate value !!!
         $value = $request->get('value');
 
-        $value = max(0, min($value, 100));
+        $value = max(10, min($value, 100));
 
         $playerJsonName = $request->get('player');
 

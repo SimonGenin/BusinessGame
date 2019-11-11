@@ -76,17 +76,20 @@ class BertrandGame extends Model
 
         foreach ($plays as $player_string => $play_value) {
 
-            if ($smallestValue == null) {
-                $smallestValue = $play_value;
-                $counter = 0;
+            if ($smallestValue === $play_value) {
+                $counter++;
             }
 
-            if ($smallestValue < $play_value) {
+            if ($smallestValue === null) {
                 $smallestValue = $play_value;
-                $counter = 0;
+                $counter = 1;
             }
 
-            $counter++;
+            if ($smallestValue > $play_value) {
+                $smallestValue = $play_value;
+                $counter = 1;
+            }
+
         }
 
         $payoffs = [];
