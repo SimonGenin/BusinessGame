@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"0a36e425c408bd71ce0c","1":"d98616198bc3b9c0f398","2":"1a049752bf59122c2ebe","3":"78299154d54b4d28a6b5","4":"854a1be853808caba9b4","5":"6b7a2e6e3739bffaac6d","6":"4f62ec41f6eb5eae8539","7":"fbe4fd7c80cb9de43aac","8":"ac3e4551cb673df9e0fa"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"0a36e425c408bd71ce0c","1":"d98616198bc3b9c0f398","2":"1a049752bf59122c2ebe","3":"78299154d54b4d28a6b5","4":"79ea81edf6650e62b85e","5":"6b7a2e6e3739bffaac6d","6":"4f62ec41f6eb5eae8539","7":"fbe4fd7c80cb9de43aac","8":"ac3e4551cb673df9e0fa","9":"94a090facec1628efb08"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46299,11 +46299,13 @@ var map = {
 	],
 	"./Play": [
 		"./resources/js/Pages/Play.vue",
-		4
+		4,
+		9
 	],
 	"./Play.vue": [
 		"./resources/js/Pages/Play.vue",
-		4
+		4,
+		9
 	],
 	"./PlayTwoThird": [
 		"./resources/js/Pages/PlayTwoThird.vue",
@@ -46348,7 +46350,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }

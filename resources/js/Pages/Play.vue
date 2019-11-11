@@ -22,7 +22,7 @@
                     <div v-else>
 
                         <p class="font-semibold" v-if="plays['turn-' + (turnIndex-1)][$page.player]">
-                            Waiting ({{ plays['turn-' +(turnIndex-1)][$page.player] }})
+                            Played {{ plays['turn-' +(turnIndex-1)][$page.player] }}
                         </p>
 
                         <input v-else class="form-input border-gray-300 border-2 text-center" v-model="value"
@@ -33,8 +33,17 @@
 
                 <div class="w-full flex justify-center" v-else-if="(turnIndex - 1) < currentTurn">
 
-                    <p v-if="plays['turn-' + (turnIndex - 1)]['player-' + (index - 1)]"> {{ payoffs['turn-' +
-                        (turnIndex-1)]['player-' + (index-1)] }}</p>
+
+                    <div v-if="plays['turn-' + (turnIndex - 1)]['player-' + (index - 1)]">
+                        <p>
+                            Played {{ plays['turn-' +(turnIndex-1)]['player-' + (index - 1)] }}
+                        </p>
+
+                        <p>Gained {{ payoffs['turn-' +
+                            (turnIndex-1)]['player-' + (index-1)] }}</p>
+                    </div>
+
+
                     <p v-else>Error Missing</p>
 
                 </div>
@@ -53,8 +62,8 @@
                 <button
                     v-if="$page.game.number_of_turns != currentTurn"
                     @click="submit"
-                        class="px-6 py-3 text-sm tracking-tight uppercase bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded "
-                        :class="{'cursor-not-allowed opacity-25' : !this.value || this.value.length === 0 }"
+                    class="px-6 py-3 text-sm tracking-tight uppercase bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded "
+                    :class="{'cursor-not-allowed opacity-25' : !this.value || this.value.length === 0 }"
                 >
                     Validate
                 </button>
@@ -66,7 +75,11 @@
                     Export for Excel
                 </button>
 
+
             </div>
+
+            <line-chart :chartdata="chartData" :options="chartOptions"/>
+
 
         </div>
 
@@ -76,10 +89,13 @@
 
 <script>
     import Layout from '../Shared/Layout'
+    import LineChart from "../Components/LineChart";
 
     export default {
+
         components: {
             Layout,
+            LineChart
         },
 
         data() {
@@ -91,7 +107,58 @@
             }
         },
 
+        computed: {
+
+            chartData() {
+                return {
+                    labels: this.generateLabels(this.$page.game.number_of_turns),
+                    datasets: this.generatePlays(this.$page.game.number_of_turns),
+                    responsive: true
+                }
+            },
+
+            chartOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            }
+
+        },
+
         methods: {
+
+            generateLabels(turns) {
+
+                return [...Array(turns).keys()].map(x => 'Turn ' + x)
+
+            },
+
+            generatePlays(turns) {
+
+                return [...Array(this.$page.game.number_of_players).keys()].map(player_index => {
+
+                    let color = this.getRandomColor()
+
+                    return {
+                        label: 'Player ' + player_index,
+                        data: [...Array(this.currentTurn).keys()].map(turn_index => this.plays['turn-' + turn_index]['player-' + player_index]),
+                        borderColor: color,
+                        backgroundColor: 'transparent'
+                    }
+                });
+
+            },
+
+            getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            },
+
 
             submit() {
 
@@ -103,12 +170,17 @@
                     player: this.$page.player,
                     value: this.value,
                     url: document.location.href
-                }).then( response => {
+                }).then(response => {
                     this.$inertia.visit(response.data)
-                } )
+                })
             },
 
         },
+
+        mounted() {
+
+
+        }
 
 
     }
