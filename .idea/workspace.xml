@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/CournotGame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CournotGameController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_16_142425_create_cournot_game_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Components/CournotGameLauncher.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/CournotGamePlay.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/InfoCournotGame.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/LaunchSession.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/LaunchSession.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,12 +172,15 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/Pages" />
-      <recent name="$PROJECT_DIR$/resources/js/Components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/Pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/Pages" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/resources/js/Components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -231,7 +241,7 @@
       <workItem from="1571672489582" duration="1557000" />
       <workItem from="1571740532783" duration="1398000" />
       <workItem from="1573481181962" duration="6473000" />
-      <workItem from="1574098159252" duration="254000" />
+      <workItem from="1574098159252" duration="2445000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1567952074508</created>
@@ -380,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573506754562</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add flare.io">
+      <created>1574098661261</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1574098661261</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +423,8 @@
     <MESSAGE value="Correct Bertrand game calculation" />
     <MESSAGE value="Update Betrand Game" />
     <MESSAGE value="try to fix error locally" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to fix error locally" />
+    <MESSAGE value="Add flare.io" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add flare.io" />
   </component>
   <component name="WindowStateProjectService">
     <state x="797" y="414" key="#com.intellij.ide.util.MemberChooser" />

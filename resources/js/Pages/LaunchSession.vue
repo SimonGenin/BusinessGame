@@ -10,6 +10,7 @@
             <game-launcher></game-launcher>
             <two-third-of-the-mean-game-launcher></two-third-of-the-mean-game-launcher>
             <repeated-inmate-dilemma-game-launcher></repeated-inmate-dilemma-game-launcher>
+            <cournot-game-launcher></cournot-game-launcher>
         </div>
 
 
@@ -21,13 +22,15 @@
     import GameLauncher from '../Components/GameLauncher'
     import TwoThirdOfTheMeanGameLauncher from '../Components/TwoThirdOfTheMeanGameLauncher'
     import RepeatedInmateDilemmaGameLauncher from '../Components/RepeatedInmateDilemmaGameLauncher'
+    import CournotGameLauncher from "../Components/CournotGameLauncher";
 
     export default {
         components: {
             Layout,
             GameLauncher,
             TwoThirdOfTheMeanGameLauncher,
-            RepeatedInmateDilemmaGameLauncher
+            RepeatedInmateDilemmaGameLauncher,
+            CournotGameLauncher
         },
 
         data() {
