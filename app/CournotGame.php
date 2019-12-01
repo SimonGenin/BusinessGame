@@ -54,21 +54,12 @@ class CournotGame extends Model
                 $played = $this->plays['turn-' . $turn]['player-' . $i]['play'];
                 $playedOpponent = $this->plays['turn-' . $turn]['player-' . ($i + 1)]['play'];
 
-                if ($played === null) {
-                    $played = false;
-                }
-
-                if ($playedOpponent === null) {
-                    $playedOpponent = false;
-                }
-
                 $payoffs['player-' . $i]['payoff'] = $this->payoff($played, $playedOpponent);
                 $payoffs['player-' . ($i + 1)]['payoff'] = $this->payoff($playedOpponent, $played);
 
             }
 
         }
-
 
         $default = $this->payoffs;
         $default['turn-' . $turn] = $payoffs;
@@ -77,51 +68,16 @@ class CournotGame extends Model
         $this->payoffs = $default;
         $this->update();
 
-
     }
 
-    public function payoff($boolA, $boolB) {
+    public function payoff($a, $b) {
 
-        if ($boolA == true) {
-
-            if ($boolB == true) {
-
-                return 2;
-
-            }
-
-            if ($boolB == false) {
-
-                return 0;
-
-            }
-
-        }
-
-        else {
-
-            if ($boolB == true) {
-
-                return 3;
-
-            }
-
-            if ($boolB == false) {
-
-                return 1;
-
-            }
-
-        }
-
-        return 999;
+        return $a * (90 - ($a + $b));
 
     }
 
     public function preparePlaysArray()
     {
-
-
 
         $plays = [];
         $plays['current_turn'] = 0;

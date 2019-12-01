@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"22d286853fa47fffd9c3","1":"6578597c235e1a9ad082","2":"6eb5e2e4cd71fe8bfa43","3":"930f6dfaf182f3119148","4":"ce5865b4a3c5e7db4b68","5":"9617238d13f4c4bc168b","6":"de3ee9a00b144de050e1","7":"f21fcdfa83cec3eb3b54","8":"65e0b102e85b8cdb49f2","9":"2d57378a01d8d2f4c200","11":"b2c378461e13dcaa01b7","12":"453ce63295ae78381011"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"22d286853fa47fffd9c3","1":"6578597c235e1a9ad082","2":"6eb5e2e4cd71fe8bfa43","3":"f449d4f1668a9885b009","4":"70e8402e40cb4b9d2c2e","5":"91acdc8153830e739bda","6":"303df18ce397b7e01ff7","7":"bb71460892b543786d87","8":"858be522f454733a0ce9","9":"bafcab05c8a53966cf31","10":"e81f7b07c81fc8532d8a","11":"77c53304748e8703c087"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -46267,43 +46267,43 @@ module.exports = function(module) {
 var map = {
 	"./CournotGamePlay": [
 		"./resources/js/Pages/CournotGamePlay.vue",
-		12
+		3
 	],
 	"./CournotGamePlay.vue": [
 		"./resources/js/Pages/CournotGamePlay.vue",
-		12
+		3
 	],
 	"./Info": [
 		"./resources/js/Pages/Info.vue",
-		3
+		4
 	],
 	"./Info.vue": [
 		"./resources/js/Pages/Info.vue",
-		3
+		4
 	],
 	"./InfoCournotGame": [
 		"./resources/js/Pages/InfoCournotGame.vue",
-		11
+		5
 	],
 	"./InfoCournotGame.vue": [
 		"./resources/js/Pages/InfoCournotGame.vue",
-		11
+		5
 	],
 	"./InfoRepeatedInmateDilemma": [
 		"./resources/js/Pages/InfoRepeatedInmateDilemma.vue",
-		4
+		6
 	],
 	"./InfoRepeatedInmateDilemma.vue": [
 		"./resources/js/Pages/InfoRepeatedInmateDilemma.vue",
-		4
+		6
 	],
 	"./InfoTwoThirdOfTheMean": [
 		"./resources/js/Pages/InfoTwoThirdOfTheMean.vue",
-		5
+		7
 	],
 	"./InfoTwoThirdOfTheMean.vue": [
 		"./resources/js/Pages/InfoTwoThirdOfTheMean.vue",
-		5
+		7
 	],
 	"./LaunchSession": [
 		"./resources/js/Pages/LaunchSession.vue",
@@ -46325,35 +46325,35 @@ var map = {
 	],
 	"./PlayTwoThird": [
 		"./resources/js/Pages/PlayTwoThird.vue",
-		6
+		8
 	],
 	"./PlayTwoThird.vue": [
 		"./resources/js/Pages/PlayTwoThird.vue",
-		6
+		8
 	],
 	"./RepeatedInmateDilemmaPlay": [
 		"./resources/js/Pages/RepeatedInmateDilemmaPlay.vue",
-		7
+		9
 	],
 	"./RepeatedInmateDilemmaPlay.vue": [
 		"./resources/js/Pages/RepeatedInmateDilemmaPlay.vue",
-		7
+		9
 	],
 	"./TwoThirdOfTheMeanPlay": [
 		"./resources/js/Pages/TwoThirdOfTheMeanPlay.vue",
-		8
+		10
 	],
 	"./TwoThirdOfTheMeanPlay.vue": [
 		"./resources/js/Pages/TwoThirdOfTheMeanPlay.vue",
-		8
+		10
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",
-		9
+		11
 	],
 	"./Welcome.vue": [
 		"./resources/js/Pages/Welcome.vue",
-		9
+		11
 	]
 };
 function webpackAsyncContext(req) {

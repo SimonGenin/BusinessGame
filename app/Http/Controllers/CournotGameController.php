@@ -101,6 +101,8 @@ class CournotGameController extends Controller
         $player = $request->get('player');
         $name = $request->get('name');
 
+        $value = max(0, min($value, 45));
+
         $game = CournotGame::find($game_id);
 
         $current_turn = $game->plays['current_turn'];

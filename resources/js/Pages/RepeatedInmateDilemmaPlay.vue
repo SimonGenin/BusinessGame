@@ -87,7 +87,7 @@
 
             opponent() {
 
-                let playerNumber = parseInt(this.player.slice(-1));
+                let playerNumber = parseInt(this.player.split("-")[1]);
 
                 if (playerNumber % 2 === 0) {
                     return 'player-' + (playerNumber + 1);

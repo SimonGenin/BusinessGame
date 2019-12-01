@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/CournotGame.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CournotGameController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_16_142425_create_cournot_game_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Components/CournotGameLauncher.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/CournotGamePlay.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/InfoCournotGame.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BusinessGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BusinessGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper_models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CournotGame.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CournotGame.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CournotGameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CournotGameController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/LaunchSession.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/LaunchSession.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/CournotGamePlay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/CournotGamePlay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/RepeatedInmateDilemmaPlay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/RepeatedInmateDilemmaPlay.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +152,14 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/laravel-frontend-presets/inertiajs" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/davidhsianturi/laravel-compass" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/silly" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/front-yaml" />
+      <path value="$PROJECT_DIR$/vendor/mpociot/documentarian" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/windwalker/renderer" />
+      <path value="$PROJECT_DIR$/vendor/windwalker/structure" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PQ4sTuQz4rlkIfSLL8VyRUU94C" />
@@ -241,7 +252,10 @@
       <workItem from="1571672489582" duration="1557000" />
       <workItem from="1571740532783" duration="1398000" />
       <workItem from="1573481181962" duration="6473000" />
-      <workItem from="1574098159252" duration="2445000" />
+      <workItem from="1574098159252" duration="2473000" />
+      <workItem from="1574949413229" duration="107000" />
+      <workItem from="1574949660389" duration="685000" />
+      <workItem from="1575211277091" duration="1849000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1567952074508</created>
@@ -397,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574098661261</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add cournot with dilemma logic">
+      <created>1574100885854</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1574100885854</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +445,8 @@
     <MESSAGE value="Update Betrand Game" />
     <MESSAGE value="try to fix error locally" />
     <MESSAGE value="Add flare.io" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add flare.io" />
+    <MESSAGE value="Add cournot with dilemma logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add cournot with dilemma logic" />
   </component>
   <component name="WindowStateProjectService">
     <state x="797" y="414" key="#com.intellij.ide.util.MemberChooser" />

@@ -68,3 +68,96 @@ namespace App{
 	class User extends \Eloquent {}
 }
 
+namespace App{
+/**
+ * App\TwoThirdOfTheMean
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $hashed_link
+ * @property int $number_of_turns
+ * @property array $game_urls
+ * @property array $plays
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereGameUrls($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereHashedLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereNumberOfTurns($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean wherePlays($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\TwoThirdOfTheMean whereUpdatedAt($value)
+ */
+	class TwoThirdOfTheMean extends \Eloquent {}
+}
+
+namespace App{
+/**
+ * App\CournotGame
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $hashed_link
+ * @property int $number_of_turns
+ * @property array $number_of_players
+ * @property array $game_urls
+ * @property array $plays
+ * @property array $payoffs
+ * @property bool $isFinished
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereGameUrls($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereHashedLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereIsFinished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereNumberOfPlayers($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereNumberOfTurns($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame wherePayoffs($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame wherePlays($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\CournotGame whereUpdatedAt($value)
+ */
+	class CournotGame extends \Eloquent {}
+}
+
+namespace App{
+/**
+ * App\RepeatedInmateDilemma
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $hashed_link
+ * @property int $number_of_turns
+ * @property array $number_of_players
+ * @property array $game_urls
+ * @property array $plays
+ * @property array $payoffs
+ * @property bool $isFinished
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereGameUrls($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereHashedLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereIsFinished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereNumberOfPlayers($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereNumberOfTurns($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma wherePayoffs($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma wherePlays($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\RepeatedInmateDilemma whereUpdatedAt($value)
+ */
+	class RepeatedInmateDilemma extends \Eloquent {}
+}
+

@@ -100,6 +100,14 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/laravel-frontend-presets/inertiajs" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/davidhsianturi/laravel-compass" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/silly" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/front-yaml" />
+      <path value="$PROJECT_DIR$/vendor/mpociot/documentarian" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/windwalker/renderer" />
+      <path value="$PROJECT_DIR$/vendor/windwalker/structure" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

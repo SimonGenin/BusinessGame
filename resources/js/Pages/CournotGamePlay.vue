@@ -11,7 +11,7 @@
                     <div v-if="payoffs">
                         <div v-for="(payoff, index) in payoffs" class="mb-2">
 
-                            You played {{ (plays[index][player]['play']) ? 'Cooperate' : 'Betray'}}, your opponent played {{ (plays[index][opponent]['play']) ? 'Cooperate' : 'Betray'}}, you got {{ payoff[player]['payoff'] }} points, your opponent got {{ payoff[opponent]['payoff'] }} points.
+                            You played {{ (plays[index][player]['play'])}}, your opponent played {{ (plays[index][opponent]['play'])}}, you got {{ payoff[player]['payoff'] }} points, your opponent got {{ payoff[opponent]['payoff'] }} points.
 
                         </div>
                     </div>
@@ -23,17 +23,14 @@
 
                     <div class="flex justify-center items-center">
 
-                        <button @click="cooperate" class="px-3 py-2 bg-green-500 text-white rounded mx-4">Cooperate
-                        </button>
-                        <button @click="defect" class="px-3 py-2 bg-red-500 text-white rounded mx-4">Betray</button>
+                        <input  type="number" class="form-input" v-model="value">
 
                     </div>
 
                 </div>
 
                 <div v-if="!isFinished" class="flex justify-center">
-                    <span v-if="value === true">Your current choice is <span class="text-green-500 font-semibold">Cooperate</span>.</span>
-                    <span v-else-if="value === false">Your current choice is <span class="text-red-500 font-semibold">Betray</span>.</span>
+                    <span v-if="value">Your current choice is <span class="font-semibold">{{ value }}</span>.</span>
                     <span v-else>You haven't chosen anything yet.</span>
                 </div>
 
@@ -44,6 +41,15 @@
 
 
             <div class="flex justify-end mt-4">
+
+                <button
+                    v-if="!isFinished"
+                    @click="submit"
+                    class="px-6 py-3 text-sm tracking-tight uppercase bg-gray-700 hover:bg-gray-600 font-semibold text-gray-100 rounded "
+                    :class="{'cursor-not-allowed opacity-25' : !this.value || this.value.length === 0 }"
+                >
+                    Validate
+                </button>
 
                 <button
                     v-if="isFinished"
@@ -87,7 +93,7 @@
 
             opponent() {
 
-                let playerNumber = parseInt(this.player.slice(-1));
+                let playerNumber = parseInt(this.player.split("-")[1]);
 
                 if (playerNumber % 2 === 0) {
                     return 'player-' + (playerNumber + 1);
@@ -101,25 +107,6 @@
 
         methods: {
 
-            cooperate() {
-
-                // if (!this.name || this.name.length === 0) return;
-
-
-                this.value = true;
-                this.submit();
-
-            },
-
-            defect() {
-
-                // if (!this.name || this.name.length === 0) return;
-
-
-                this.value = false;
-                this.submit();
-
-            },
 
             submit() {
 
