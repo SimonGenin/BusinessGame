@@ -11,7 +11,7 @@
                     <div v-if="payoffs">
                         <div v-for="(payoff, index) in payoffs" class="mb-2">
 
-                            You played {{ (plays[index][player]['play'])}}, your opponent played {{ (plays[index][opponent]['play'])}}, you got {{ payoff[player]['payoff'] }} points, your opponent got {{ payoff[opponent]['payoff'] }} points.
+                            You played {{ (plays[index][player]['play'] || 0)}}, your opponent played {{ (plays[index][opponent]['play']) || 0}}, you got {{ payoff[player]['payoff'] }} points, your opponent got {{ payoff[opponent]['payoff'] }} points.
 
                         </div>
                     </div>

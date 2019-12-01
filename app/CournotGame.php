@@ -51,8 +51,8 @@ class CournotGame extends Model
                 $payoffs['player-' . $i] = [];
                 $payoffs['player-' . ($i + 1)] = [];
 
-                $played = $this->plays['turn-' . $turn]['player-' . $i]['play'];
-                $playedOpponent = $this->plays['turn-' . $turn]['player-' . ($i + 1)]['play'];
+                $played = $this->plays['turn-' . $turn]['player-' . $i]['play'] || 0;
+                $playedOpponent = $this->plays['turn-' . $turn]['player-' . ($i + 1)]['play'] || 0;
 
                 $payoffs['player-' . $i]['payoff'] = $this->payoff($played, $playedOpponent);
                 $payoffs['player-' . ($i + 1)]['payoff'] = $this->payoff($playedOpponent, $played);
