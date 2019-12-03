@@ -54,6 +54,29 @@ Route::get('/code/{slug}', function ($slug) {
 
     }
 
+    $games = \App\CournotGame::all();
+
+    foreach ($games as $game) {
+
+        $foundSlug = Arr::last((explode('/', $game->game_urls['professor_url'])));
+        if ($foundSlug == $slug) {
+            return redirect('/play/' . $game->game_urls['professor_url']);
+        }
+
+        $student_urls = $game->game_urls['student_urls'];
+
+        foreach ($student_urls as $studentUrl) {
+
+            $foundSlug = Arr::last((explode('/', $studentUrl)));
+
+            if ($foundSlug == $slug) {
+                return redirect('/play/' . $studentUrl);
+            }
+
+        }
+
+    }
+
     $games = \App\TwoThirdOfTheMean::all();
 
     foreach ($games as $game) {

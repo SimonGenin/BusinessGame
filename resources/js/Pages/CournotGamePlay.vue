@@ -14,6 +14,9 @@
                             You played {{ (plays[index][player]['play'] || 0)}}, your opponent played {{ (plays[index][opponent]['play']) || 0}}, you got {{ payoff[player]['payoff'] }} points, your opponent got {{ payoff[opponent]['payoff'] }} points.
 
                         </div>
+
+                        <div>Your current total is {{ player_total(currentTurn) || 0 }} and your opponent is {{ opponent_total(currentTurn) || 0 }}</div>
+
                     </div>
                 </div>
 
@@ -101,11 +104,33 @@
 
                 return 'player-' + (playerNumber - 1);
 
-            }
+            },
+
+
 
         },
 
         methods: {
+
+            player_total(index) {
+                let total = 0;
+
+                for (let i = 0 ; i <= index ; i++) {
+                    total += parseInt(this.payoffs['turn-' + i][this.player]['payoff']);
+                }
+
+                return total;
+            },
+
+            opponent_total(index) {
+                let total = 0;
+
+                for (let i = 0 ; i <= index ; i++) {
+                    total += parseInt(this.payoffs['turn-' + i][this.opponent]['payoff']);
+                }
+
+                return total;
+            },
 
 
             submit() {

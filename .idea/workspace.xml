@@ -4,8 +4,9 @@
     <list default="true" id="1cc7a48e-9829-4a6b-8ad9-2ad0d600e008" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Components/LineChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/LineChart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/CournotGamePlay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/CournotGamePlay.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Pages/Play.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Play.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +248,7 @@
       <workItem from="1574949413229" duration="107000" />
       <workItem from="1574949660389" duration="685000" />
       <workItem from="1575211277091" duration="3672000" />
-      <workItem from="1575411586572" duration="953000" />
+      <workItem from="1575411586572" duration="2437000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1567952074508</created>
@@ -431,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575214573636</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Change tension of chart line">
+      <created>1575412609099</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1575412609100</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +470,8 @@
     <MESSAGE value="Add cournot logic + fix bug for one vs one games" />
     <MESSAGE value="Add logic for no input" />
     <MESSAGE value="Fix logic for no input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix logic for no input" />
+    <MESSAGE value="Change tension of chart line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change tension of chart line" />
   </component>
   <component name="WindowStateProjectService">
     <state x="797" y="414" key="#com.intellij.ide.util.MemberChooser" />
