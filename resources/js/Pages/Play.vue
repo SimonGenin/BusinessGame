@@ -120,7 +120,7 @@
             chartOptions() {
                 return {
                     responsive: true,
-                    maintainAspectRatio: false
+                    maintainAspectRatio: false,
                 }
             }
 
@@ -144,7 +144,8 @@
                         label: 'Player ' + player_index,
                         data: [...Array(this.currentTurn).keys()].map(turn_index => this.plays['turn-' + turn_index]['player-' + player_index]),
                         borderColor: color,
-                        backgroundColor: 'transparent'
+                        backgroundColor: 'transparent',
+                        lineTension: 0.1,
                     }
                 });
 
