@@ -29,7 +29,7 @@
     },
     "dependencies": {
         "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
-        "chart.js": "^2.9.2",
+        "chart.js": "^2.9.4",
         "tailwindcss": "^1.1.2",
         "vue-chartjs": "^3.5.0"
     }
