@@ -115,7 +115,7 @@
             player_total(index) {
                 let total = 0;
 
-                for (let i = 0 ; i <= index ; i++) {
+                for (let i = 0 ; i < index ; i++) {
                     total += parseInt(this.payoffs['turn-' + i][this.player]['payoff']);
                 }
 
@@ -125,7 +125,7 @@
             opponent_total(index) {
                 let total = 0;
 
-                for (let i = 0 ; i <= index ; i++) {
+                for (let i = 0 ; i < index ; i++) {
                     total += parseInt(this.payoffs['turn-' + i][this.opponent]['payoff']);
                 }
 

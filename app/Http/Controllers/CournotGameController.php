@@ -15,8 +15,8 @@ class CournotGameController extends Controller
 
     public function show($name, $player, $slug) {
 
-        $student_path = join(['cournot', $name, $player, $slug], '/');
-        $prof_path = join(['cournot', $name, 'professor', $slug], '/');
+        $student_path = join('/', ['cournot', $name, $player, $slug]);
+        $prof_path = join('/', ['cournot', $name, 'professor', $slug]);
 
         $game = DB::table('cournot_games')->whereJsonContains('game_urls', ['student_urls' => [ $player => $student_path]])->orWhereJsonContains('game_urls', ['professor_url' => $prof_path])->first();
 

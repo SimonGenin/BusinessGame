@@ -14,8 +14,8 @@ class TwoThirdOfTheMeanController extends Controller
 
     public function show($name, $slug) {
 
-        $student_path = join(['two-third-of-the-mean', $name, 'players', $slug], '/');
-        $prof_path = join(['two-third-of-the-mean', $name, 'professor', $slug], '/');
+        $student_path = join('/', ['two-third-of-the-mean', $name, 'players', $slug]);
+        $prof_path = join('/', ['two-third-of-the-mean', $name, 'professor', $slug]);
 
         $game = DB::table('two_third_of_the_means')->whereJsonContains('game_urls', ['student_url' => $student_path])->orWhereJsonContains('game_urls', ['professor_url' => $prof_path])->first();
 

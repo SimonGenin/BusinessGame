@@ -14,8 +14,8 @@ class RepeatedInmateDilemmaController extends Controller
 
     public function show($name, $player, $slug) {
 
-        $student_path = join(['repeated-inmate-dilemma', $name, $player, $slug], '/');
-        $prof_path = join(['repeated-inmate-dilemma', $name, 'professor', $slug], '/');
+        $student_path = join('/', ['repeated-inmate-dilemma', $name, $player, $slug]);
+        $prof_path = join('/', ['repeated-inmate-dilemma', $name, 'professor', $slug]);
 
         $game = DB::table('repeated_inmate_dilemmas')->whereJsonContains('game_urls', ['student_urls' => [ $player => $student_path]])->orWhereJsonContains('game_urls', ['professor_url' => $prof_path])->first();
 

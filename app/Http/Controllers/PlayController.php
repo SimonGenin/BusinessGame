@@ -12,7 +12,7 @@ class PlayController extends Controller
 {
     public function index ($game, $name, $player, $slug) {
 
-        $path = join([$game, $name, $player, $slug], '/');
+        $path = join('/', [$game, $name, $player, $slug]);
 
         $game = DB::table('bertrand_games')->whereJsonContains('game_urls', ['student_urls' => [ $player => $path]])->orWhereJsonContains('game_urls', ['professor_url' => $path ])->first();
 
